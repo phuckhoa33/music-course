@@ -1,10 +1,11 @@
+import { Inject, Service } from "typedi";
 import { IAuthService } from "../services/interfaces/auth.interface";
+import "reflect-metadata";
 
 export class AuthController {
 
-    constructor(
-        private readonly authService: IAuthService
-    ){}
+    @Inject('AuthService')
+    authService: IAuthService
 
     async login() {
         try {

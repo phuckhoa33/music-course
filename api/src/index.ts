@@ -2,6 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
 import authRouter from './routers/auth.router';
+import "reflect-metadata";
 
 const app = express();
 app.use(express.json({limit: '30mb'}));
